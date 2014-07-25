@@ -47,7 +47,6 @@ public class ForecastFragment extends Fragment {
         super.onCreate(savedInstanceState);
         // add this line to allow fragment to handle menu events
         setHasOptionsMenu(true);
-
     }
 
     @Override
@@ -130,9 +129,6 @@ public class ForecastFragment extends Fragment {
 
         private final String LOG_TAG = FetchWeatherTask.class.getSimpleName();
 
-        /* The date/time conversion code is going to be moved outside the asynctask later,
-       * so for convenience we're breaking it out into its own method now.
-       */
         private String getReadableDateString(long time) {
             // Because the API returns a unix timestamp (measured in seconds),
             // it must be converted to milliseconds in order to be converted to valid date.
@@ -141,9 +137,6 @@ public class ForecastFragment extends Fragment {
             return format.format(date);
         }
 
-        /**
-         * Prepare the weather high/lows for presentation.
-         */
         private String formatHighLows(double high, double low) {
             // Data is fetched in Celsius by default
             // If user prefers Fahrenheit, convert values here
@@ -168,13 +161,6 @@ public class ForecastFragment extends Fragment {
             return highLowStr;
         }
 
-        /**
-         * Take the String representing the complete forecast in JSON Format and
-         * pull out the data we need to construct the Strings needed for the wireframes.
-         * <p/>
-         * Fortunately parsing is easy:  constructor takes the JSON string and converts it
-         * into an Object hierarchy for us.
-         */
         private String[] getWeatherDataFromJson(String forecastJsonStr, int numDays)
                 throws JSONException {
 
