@@ -16,5 +16,6 @@
     <string name="pref_units_label_metric">Metric</string>
     <string name="pref_units_label_imperial">Imperial</string>
     <string name="action_map">Map Location</string>
+    <string name="menu_sharing_title">Share</string>
 
 </resources>
