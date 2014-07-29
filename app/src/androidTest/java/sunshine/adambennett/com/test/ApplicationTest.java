@@ -1,4 +1,4 @@
-package sunshine.adambennett.com.sunshine;
+package sunshine.adambennett.com.test;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
